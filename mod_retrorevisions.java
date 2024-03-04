@@ -10,7 +10,8 @@ public class mod_retrorevisions extends BaseMod
     public static final Block NetheriteBlock = (new BlockNetheriteBlock(552 /* ID of Block*/, 0).setHardness(5.0F/* How long it takes to break*/).setResistance(0.5F/* Resistance to explosion*/).setStepSound(Block.soundStoneFootstep/* Sound what it will make when you walk on it*/).setBlockName("Block of Netherite"));
     public static final Block SethosStone = (new BlockSethosStone(553 /* ID of Block*/, 0).setHardness(5.0F/* How long it takes to break*/).setResistance(0.5F/* Resistance to explosion*/).setStepSound(Block.soundStoneFootstep/* Sound what it will make when you walk on it*/).setBlockName("Sethos Stone"));
     public static final Item LuxItem = new ItemLuxItem(3000).setItemName("Lux Aeterna");
-
+    public static final BlockContainer DaylightBlock = new BlockDaylightBlock(555);
+    public static final BlockContainer NightlightBlock = new BlockNightlightBlock(556);
     public void load()
     {
 
@@ -58,6 +59,32 @@ public class mod_retrorevisions extends BaseMod
 
 
     }
+
+    {
+
+        /*DAYLIGHT BLOCK*/
+        DaylightBlock.blockIndexInTexture = ModLoader.addOverride("/terrain.png", "/images/daylight_detector.png");/* /folderwhereimagewillbe/nameofblock.png */
+        ModLoader.registerBlock(DaylightBlock);
+        DaylightBlock.setBlockName("Daylight Detector");
+        ModLoader.addName(DaylightBlock, "Daylight Detector"); /* In game name*/
+        ModLoader.addRecipe(new ItemStack(DaylightBlock), "XXX", "XYX", "XXX", 'X', Item.redstone, 'Y', mod_retrorevisions.NetheriteBlock);
+
+
+    }
+
+
+    {
+
+        /*NightLight Detector BLOCK*/
+        NightlightBlock.blockIndexInTexture = ModLoader.addOverride("/terrain.png", "/images/night_detector.png");/* /folderwhereimagewillbe/nameofblock.png */
+        ModLoader.registerBlock(NightlightBlock);
+        NightlightBlock.setBlockName("Night Detector");
+        ModLoader.addName(NightlightBlock, "Night Detector"); /* In game name*/
+        ModLoader.addRecipe(new ItemStack(NightlightBlock), "XXX", "XYX", "XXX", 'X', Item.redstone, 'Y', mod_retrorevisions.DaylightBlock);
+
+
+    }
+ 
 
 
     public String getVersion()
