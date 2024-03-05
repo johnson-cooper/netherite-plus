@@ -22,6 +22,6 @@ Minecraft 1.2.5 mod for backporting various features from future versions of Min
 
 
 ```bash
-  add to the minecraft.jar either through prism/mmc or manually
+  add to the minecraft.jar the entire zip either through prism/mmc or manually
 ```
 
