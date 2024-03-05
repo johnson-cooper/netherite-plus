@@ -14,7 +14,7 @@ Minecraft 1.2.5 mod for backporting various features from future versions of Min
 - Lux Aeterna (Made with 9 Blocks of Netherite)
 - Beacon (Complete backport of the beacon that extends in a 50 block radius) (Made by smelting Lux Aeterna)
 - Item frames
-- Daylight / Night Detectors (Made with block of netherite in middle, surrounded by redstone)
+- Daylight / Night Detectors (Made with glowstone in middle, surrounded by redstone)
 
 
 ## Installation:
