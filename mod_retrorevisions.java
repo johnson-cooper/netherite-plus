@@ -67,7 +67,7 @@ public class mod_retrorevisions extends BaseMod
         ModLoader.registerBlock(DaylightBlock);
         DaylightBlock.setBlockName("Daylight Detector");
         ModLoader.addName(DaylightBlock, "Daylight Detector"); /* In game name*/
-        ModLoader.addRecipe(new ItemStack(DaylightBlock), "XXX", "XYX", "XXX", 'X', Item.redstone, 'Y', mod_retrorevisions.NetheriteBlock);
+        ModLoader.addRecipe(new ItemStack(DaylightBlock), "XXX", "XYX", "XXX", 'X', Item.redstone, 'Y', Block.glowStone);
 
 
     }
