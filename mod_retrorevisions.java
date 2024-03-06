@@ -12,6 +12,8 @@ public class mod_retrorevisions extends BaseMod
     public static final Item LuxItem = new ItemLuxItem(3000).setItemName("Lux Aeterna");
     public static final BlockContainer DaylightBlock = new BlockDaylightBlock(555);
     public static final BlockContainer NightlightBlock = new BlockNightlightBlock(556);
+    public static final Block ChimneyBlock = (new BlockChimneyBlock(557 /* ID of Block*/, 0).setHardness(3.0F/* How long it takes to break*/).setResistance(0.5F/* Resistance to explosion*/).setStepSound(Block.soundStoneFootstep/* Sound what it will make when you walk on it*/).setBlockName("Chimney"));
+
     public void load()
     {
 
@@ -81,6 +83,17 @@ public class mod_retrorevisions extends BaseMod
         NightlightBlock.setBlockName("Night Detector");
         ModLoader.addName(NightlightBlock, "Night Detector"); /* In game name*/
         ModLoader.addRecipe(new ItemStack(NightlightBlock), "XXX", "XYX", "XXX", 'X', Item.redstone, 'Y', mod_retrorevisions.DaylightBlock);
+
+
+    }
+
+    {
+
+        /*CHIMNEY BLOCK*/
+        ChimneyBlock.blockIndexInTexture = ModLoader.addOverride("/terrain.png", "/images/chimney_block.png");/* /folderwhereimagewillbe/nameofblock.png */
+        ModLoader.registerBlock(ChimneyBlock);
+        ModLoader.addName(ChimneyBlock, "Chimney"); /* In game name*/
+        ModLoader.addRecipe(new ItemStack(ChimneyBlock), "XXX", "XYX", "XXX", 'X', Item.coal, 'Y', Item.redstone);
 
 
     }
