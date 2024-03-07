@@ -18,6 +18,7 @@ Minecraft 1.2.5 mod for backporting various features from future versions of Min
 Original Blocks:
 - Chimney (redstone surrounded by coal) block that emits smoke when powered by redstone
 - Lux Aeterna (Made with 9 Blocks of Netherite)
+- Iron Boat (Unbreakable collision boat that can move fast on ice like in later versions)
 
 ## Installation:
 
