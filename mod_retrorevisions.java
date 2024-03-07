@@ -1,4 +1,5 @@
 package net.minecraft.src;
+import java.util.Map;
 
 
 public class mod_retrorevisions extends BaseMod
@@ -13,6 +14,10 @@ public class mod_retrorevisions extends BaseMod
     public static final BlockContainer DaylightBlock = new BlockDaylightBlock(555);
     public static final BlockContainer NightlightBlock = new BlockNightlightBlock(556);
     public static final Block ChimneyBlock = (new BlockChimneyBlock(557 /* ID of Block*/, 0).setHardness(3.0F/* How long it takes to break*/).setResistance(0.5F/* Resistance to explosion*/).setStepSound(Block.soundStoneFootstep/* Sound what it will make when you walk on it*/).setBlockName("Chimney"));
+    public static final Item ItemIronBoat = new ItemIronBoatItem(3001).setItemName("Iron Boat");
+
+
+
 
     public void load()
     {
@@ -97,11 +102,44 @@ public class mod_retrorevisions extends BaseMod
 
 
     }
- 
+
+    {
+        /*IRON BOAT ENTITY*/
+        ModLoader.registerEntityID(EntityIronBoat.class, "IronBoat", ModLoader.getUniqueEntityId());
+        // Register boat textures
+
+
+    }
+
+    /*IRON BOAT BLOCK*/
+
+    {
+
+        ItemIronBoat.iconIndex = ModLoader.addOverride("/gui/items.png" , "/images/iron_boat_item.png");
+        ModLoader.addName(ItemIronBoat, "Iron Boat");
+        ModLoader.addRecipe(new ItemStack(ItemIronBoat, 1), new Object[]
+                {
+                        "@ @", "@@@", "@@@", Character.valueOf('@'), Item.ingotIron /* Recipe "@@@", " # ", " # " that is pickaxe recipe*/
+                });
+
+
+    }
+
+    @Override
+    public void addRenderer(Map var1)
+    {
+        var1.put(EntityIronBoat.class, new RenderIronBoat());
+    }
+
+
 
 
     public String getVersion()
     {
         return "1.2.5";
     }
+
+
+
+
 }
