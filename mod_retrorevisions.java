@@ -117,10 +117,7 @@ public class mod_retrorevisions extends BaseMod
 
         ItemIronBoat.iconIndex = ModLoader.addOverride("/gui/items.png" , "/images/iron_boat_item.png");
         ModLoader.addName(ItemIronBoat, "Iron Boat");
-        ModLoader.addRecipe(new ItemStack(ItemIronBoat, 1), new Object[]
-                {
-                        "@ @", "@@@", "@@@", Character.valueOf('@'), Item.ingotIron /* Recipe "@@@", " # ", " # " that is pickaxe recipe*/
-                });
+        ModLoader.addRecipe(new ItemStack(ItemIronBoat), "XXX", "XYX", "XXX", 'X', Item.ingotIron, 'Y', Item.boat);
 
 
     }
