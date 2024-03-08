@@ -15,6 +15,7 @@ public class mod_retrorevisions extends BaseMod
     public static final BlockContainer NightlightBlock = new BlockNightlightBlock(556);
     public static final Block ChimneyBlock = (new BlockChimneyBlock(557 /* ID of Block*/, 0).setHardness(3.0F/* How long it takes to break*/).setResistance(0.5F/* Resistance to explosion*/).setStepSound(Block.soundStoneFootstep/* Sound what it will make when you walk on it*/).setBlockName("Chimney"));
     public static final Item ItemIronBoat = new ItemIronBoatItem(3001).setItemName("Iron Boat");
+    public static final Block Redstonestairs = (new RedstoneStairs(559 /* ID of Block*/).setHardness(3.0F/* How long it takes to break*/).setResistance(0.5F/* Resistance to explosion*/).setStepSound(Block.soundStoneFootstep/* Sound what it will make when you walk on it*/).setBlockName("Redstone Stairs"));
 
 
 
@@ -121,6 +122,19 @@ public class mod_retrorevisions extends BaseMod
 
 
     }
+
+    {
+
+        /*REDSTONE STAIRS BLOCK*/
+
+        ModLoader.registerBlock(Redstonestairs);
+        ModLoader.addName(Redstonestairs, "Redstone Stairs"); /* In game name*/
+        ModLoader.addRecipe(new ItemStack(Redstonestairs), "X  ", "XX ", "YYY", 'X', Item.ingotIron, 'Y', Item.redstone);
+
+
+    }
+
+
 
     @Override
     public void addRenderer(Map var1)
