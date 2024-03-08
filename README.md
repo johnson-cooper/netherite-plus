@@ -19,6 +19,7 @@ Original Blocks:
 - Chimney (redstone surrounded by coal) block that emits smoke when powered by redstone
 - Lux Aeterna (Made with 9 Blocks of Netherite)
 - Iron Boat (Unbreakable collision boat that can move fast on ice like in later versions)
+- Redstone Stairs (Changes direction based on redstone signal) (three redstone dust on bottom, 3 ingots like stairs)
 
 ## Installation:
 
